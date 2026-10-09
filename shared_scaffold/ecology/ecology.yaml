@@ -1,5 +1,5 @@
-name: "Paranormal Phenomena"
-order: 3
+name: "<display name>"
+order:
 maturity: placeholder
 governed_by: HASEOS
 ecosystems: []

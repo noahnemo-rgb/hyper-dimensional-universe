@@ -12,7 +12,7 @@ Child universes may extend but never contradict multiverse-level governance cont
 
 All layers of this universe operate under [HASEOS](https://github.com/noahnemo-rgb/haseos-spiral-swarm) (Human-AI Symbiotic Equality Orchestration System). Every layer must wire HASEOS governance before reaching `maturity: active`. Placeholder layers may declare `governed_by: HASEOS` without full wiring, but must list governance wiring in `known_gaps`.
 
-This repo has `governance/`. It does not have `governance/constitution.yaml`. Current `ecology.yaml` and `ecosystem.yaml` files do not declare `governed_by`.
+`governed_by: HASEOS` is set on `universe.yaml`, each `ecology.yaml`, and each `ecosystem.yaml`. `governance/constitution.yaml` inherits [HASEOS-IDAO CONSTITUTION.md](https://github.com/noahnemo-rgb/HASEOS-IDAO/blob/main/CONSTITUTION.md) (first formal draft, unratified). [haseos-spiral-swarm governance/charter.md](https://github.com/noahnemo-rgb/haseos-spiral-swarm/blob/main/governance/charter.md) is a workshop stub. It is not the HASEOS Constitution. Each ecology and ecosystem has `governance/constitution.yaml` extending the universe file. Local rules are empty.
 
 ---
 
@@ -65,10 +65,10 @@ Every layer of the hierarchy must have a machine-readable manifest.
 
 | Layer | Manifest | Fields in this repo |
 |-------|----------|---------------------|
-| Universe | `universe.yaml` | Universe record. The `ecologies` list fields are `name`, `slug`, `path`, `maturity`. |
-| Ecology | `ecology.yaml` | `name`, `order`, `maturity`, `ecosystems`. |
-| Ecosystem | `ecosystem.yaml` | `name`, `order`, `maturity`. |
-| MVP / Product | `mvp.yaml` or `package.json` / `pyproject.toml` | No `mvp.yaml` in this repo. No field list is defined here. |
+| Universe | `universe.yaml` | Universe record, including `governed_by`. The `ecologies` list fields are `name`, `slug`, `path`, `maturity`. |
+| Ecology | `ecology.yaml` | `name`, `order`, `maturity`, `governed_by`, `ecosystems`. |
+| Ecosystem | `ecosystem.yaml` | `name`, `order`, `maturity`, `governed_by`. |
+| MVP / Product | `mvp.yaml` or `package.json` / `pyproject.toml` | No MVP exists yet. The template fields are below. |
 
 `path` is from the repo root. `order` is on `ecology.yaml` and `ecosystem.yaml` only. It is not repeated on the parent list.
 
@@ -86,6 +86,8 @@ Ecology (`containers/<slug>/`):
 <slug>/
 ├── README.md
 ├── ecology.yaml
+├── governance/
+│   └── constitution.yaml
 ├── ecosystems/
 ├── mvps/
 │   ├── monetized/
@@ -100,6 +102,8 @@ Ecosystem (`containers/<ecology-slug>/ecosystems/<slug>/`):
 <slug>/
 ├── README.md
 ├── ecosystem.yaml
+├── governance/
+│   └── constitution.yaml
 ├── mvps/
 │   ├── monetized/
 │   └── unmonetized/
@@ -141,26 +145,39 @@ Documented Outliers ecosystems:
 ### Ecology
 
 1. Make a slug from the display name: lowercase, hyphenated, and safe as a directory name.
-2. Create `containers/<slug>/` with the ecology folder layout above.
-3. Write `ecology.yaml` with `name`, `order`, `maturity`, and `ecosystems`. Use `ecosystems: []` until an ecosystem exists. Set `order` to the next integer.
-4. Set the `README.md` heading to the display name only.
-5. Append an `ecologies` entry in `universe.yaml` with `name`, `slug`, `path`, and `maturity`.
+2. Copy `shared_scaffold/ecology/` to `containers/<slug>/`.
+3. Fill `<display name>` and `order` in `ecology.yaml` and the `README.md` heading. Keep `governed_by: HASEOS`. Use `ecosystems: []` until an ecosystem exists.
+4. Append an `ecologies` entry in `universe.yaml` with `name`, `slug`, `path`, and `maturity`.
 
 ### Ecosystem
 
 1. Make a slug the same way.
-2. Create `containers/<ecology-slug>/ecosystems/<slug>/` with the ecosystem folder layout above.
-3. Write `ecosystem.yaml` with `name`, `order`, and `maturity`. Set `order` to the next integer within that ecology.
-4. Set the `README.md` heading to the ecosystem display name only.
-5. Append an entry to that ecology's `ecology.yaml` `ecosystems` list with `name`, `slug`, `path`, and `maturity`.
+2. Copy `shared_scaffold/ecosystem/` to `containers/<ecology-slug>/ecosystems/<slug>/`.
+3. Fill `<display name>` and `order` in `ecosystem.yaml` and the `README.md` heading. Keep `governed_by: HASEOS`.
+4. Append an entry to that ecology's `ecology.yaml` `ecosystems` list with `name`, `slug`, `path`, and `maturity`.
 
 ### MVP
 
 1. Place the MVP directory under `mvps/monetized/` or `mvps/unmonetized/` on the ecology or the ecosystem that holds it.
 2. Add a manifest. The ONE Universe scaffold law names `mvp.yaml` or `package.json` / `pyproject.toml` for an MVP / Product.
-3. This repo does not define `mvp.yaml` fields.
+3. Copy `shared_scaffold/mvp/monetized/` or `shared_scaffold/mvp/unmonetized/`. The parent law does not define `mvp.yaml` fields. ONE Universe `sub_components` entries use `name`, `role`, and `maturity`. The template also sets `governed_by: HASEOS` and `monetized`. `monetized` matches the folder. It is not a parent-law field.
 
 ---
+
+## Templates
+
+`shared_scaffold/` holds fill-in skeletons:
+
+| Template | Path |
+|----------|------|
+| Ecology | `shared_scaffold/ecology/` |
+| Ecosystem | `shared_scaffold/ecosystem/` |
+| Monetized MVP | `shared_scaffold/mvp/monetized/` |
+| Unmonetized MVP | `shared_scaffold/mvp/unmonetized/` |
+| Ideation | `shared_scaffold/ideation/ideation.md` |
+| Document | `shared_scaffold/document/document.md` |
+
+README headings and the ideation and document files are `# <display name>` only. No ideation or document body fields are defined.
 
 ## Maturity
 
@@ -173,7 +190,7 @@ Documented Outliers ecosystems:
 | `stable` | Active + documented + tested |
 | `deprecated` | Sunset, preserved for reference |
 
-This universe is `scaffolded`: `universe.yaml`, this `SCAFFOLD.md`, and the directory structure exist. The six ecologies and the three ecosystems remain `placeholder`.
+This universe is `in_progress`. Scaffold law defines `in_progress` as active development, incomplete governance. Manifest, this `SCAFFOLD.md`, the directory structure, and HASEOS wiring by reference exist. Local charter, roadmap, policies, and compliance sections are empty. There is no MVP, so this is not `active`. The six ecologies and the three ecosystems remain `placeholder`.
 
 ---
 
@@ -182,3 +199,4 @@ This universe is `scaffolded`: `universe.yaml`, this `SCAFFOLD.md`, and the dire
 | Date | Change |
 |------|--------|
 | 2026-10-08 | Added this file. Universe maturity set to `scaffolded`. |
+| 2026-10-08 | Wired `governance/` to HASEOS by reference. Populated `shared_scaffold/` templates. Universe maturity set to `in_progress`. |

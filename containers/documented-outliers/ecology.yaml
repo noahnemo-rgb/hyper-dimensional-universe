@@ -1,6 +1,7 @@
 name: "Documented Outliers"
 order: 6
 maturity: placeholder
+governed_by: HASEOS
 ecosystems:
   - name: "Anomalies"
     slug: anomalies

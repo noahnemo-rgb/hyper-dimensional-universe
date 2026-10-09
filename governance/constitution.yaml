@@ -1,0 +1,11 @@
+governed_by: HASEOS
+status: unratified
+inherits_from:
+  - repo: github.com/noahnemo-rgb/HASEOS-IDAO
+    path: CONSTITUTION.md
+    status: first formal draft, unratified
+  - repo: github.com/noahnemo-rgb/haseos-spiral-swarm
+    path: governance/charter.md
+    status: workshop stub
+# owner
+local_rules: []

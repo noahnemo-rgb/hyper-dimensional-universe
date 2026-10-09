@@ -1,0 +1,4 @@
+governed_by: HASEOS
+extends: governance/constitution.yaml
+# owner
+local_rules: []
