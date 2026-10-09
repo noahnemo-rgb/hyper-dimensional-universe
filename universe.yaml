@@ -79,3 +79,7 @@ ecologies:
     slug: documented-channelings
     path: containers/documented-channelings
     maturity: placeholder
+  - name: "Documented Outliers"
+    slug: documented-outliers
+    path: containers/documented-outliers
+    maturity: placeholder
