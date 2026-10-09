@@ -57,3 +57,29 @@ next_steps:
   - identify 3–6 founding ecosystems aligned with consciousness and multidimensionality
   - implement governance/ wired to HASEOS
   - draft charter.md and roadmap.md
+
+ecologies:
+  - name: "UFOs/UAPs"
+    slug: ufos-uaps
+    path: containers/ufos-uaps
+    maturity: placeholder
+  - name: "Ancient Texts describing Hyper-Dimensional Entities"
+    slug: ancient-texts-describing-hyper-dimensional-entities
+    path: containers/ancient-texts-describing-hyper-dimensional-entities
+    maturity: placeholder
+  - name: "Paranormal Phenomena"
+    slug: paranormal-phenomena
+    path: containers/paranormal-phenomena
+    maturity: placeholder
+  - name: "Crop Circles"
+    slug: crop-circles
+    path: containers/crop-circles
+    maturity: placeholder
+  - name: "Documented Channelings"
+    slug: documented-channelings
+    path: containers/documented-channelings
+    maturity: placeholder
+  - name: "Documented Outliers"
+    slug: documented-outliers
+    path: containers/documented-outliers
+    maturity: placeholder

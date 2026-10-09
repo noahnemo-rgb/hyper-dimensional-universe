@@ -1,0 +1,16 @@
+name: "Documented Outliers"
+order: 6
+maturity: placeholder
+ecosystems:
+  - name: "Anomalies"
+    slug: anomalies
+    path: containers/documented-outliers/ecosystems/anomalies
+    maturity: placeholder
+  - name: "Enigmas"
+    slug: enigmas
+    path: containers/documented-outliers/ecosystems/enigmas
+    maturity: placeholder
+  - name: "Erratics"
+    slug: erratics
+    path: containers/documented-outliers/ecosystems/erratics
+    maturity: placeholder
