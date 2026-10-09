@@ -4,7 +4,7 @@
 universe:
   name: ONE Hyper-dimensional Universe
   tagline: Beyond Space. Beyond Time.
-  maturity: placeholder
+  maturity: scaffolded
   parent_multiverse: one-multiverse
   inherits_from: one-universe
   governance:
@@ -26,7 +26,7 @@ repos:
     name: ONE Hyper-dimensional Universe
     role: master
     repo: github.com/noahnemo-rgb/one-hyper-dimensional-universe
-    maturity: placeholder
+    maturity: scaffolded
     owner: noahnemo-rgb
     tags: [master, brand, manifest, placeholder]
     description: >

@@ -2,7 +2,7 @@
 
 > Beyond Space. Beyond Time.
 
-**Maturity:** `placeholder`  ·  **Parent:** [ONE Multiverse](https://github.com/noahnemo-rgb/ONE-)  ·  **Inherits from:** [ONE Universe](https://github.com/noahnemo-rgb/ONE-)
+**Maturity:** `scaffolded`  ·  **Parent:** [ONE Multiverse](https://github.com/noahnemo-rgb/ONE-)  ·  **Inherits from:** [ONE Universe](https://github.com/noahnemo-rgb/ONE-)
 
 ONE Hyper-dimensional Universe is a child universe under ONE Multiverse. It inherits the structural grammar, governance model, and scaffold law of ONE Universe. Its domain is consciousness, multidimensionality, and the convergence of science, spirit, and sovereign intelligence.
 
@@ -38,7 +38,7 @@ This universe follows the ONE Universe scaffold inheritance law. See [SCAFFOLD.m
 
 ## Status
 
-`placeholder` — six ecology placeholders are under `containers/`. Documented Outliers has three ecosystem placeholders (Anomalies, Enigmas, Erratics). No MVPs yet. See [STATUS.md](./STATUS.md).
+`scaffolded` — six ecology placeholders are under `containers/`. Documented Outliers has three ecosystem placeholders (Anomalies, Enigmas, Erratics). No MVPs yet. See [STATUS.md](./STATUS.md).
 
 ## Known Gaps
 

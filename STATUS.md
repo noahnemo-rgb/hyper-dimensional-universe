@@ -1,6 +1,6 @@
 # ONE Hyper-dimensional Universe — STATUS
 
-**Maturity:** `placeholder`  ·  **Last reviewed:** 2026-10-08
+**Maturity:** `scaffolded`  ·  **Last reviewed:** 2026-10-08
 
 ## Current state
 
@@ -10,7 +10,7 @@ Each ecology holds `ecosystems/`, `mvps/monetized/`, `mvps/unmonetized/`, `ideat
 
 The model is a universe of many ecologies, each with many ecosystems, populated with monetized and unmonetized website/app SaaS MVPs plus ideations and documents.
 
-Maturity stays `placeholder`. Scaffold law defines `placeholder` as declared in the manifest with no files yet, and `scaffolded` as a manifest, a `SCAFFOLD.md`, and a directory structure. Manifests and directories exist; this repo has no `SCAFFOLD.md`.
+Maturity is `scaffolded`. Scaffold law defines `scaffolded` as a manifest, a `SCAFFOLD.md`, and a directory structure. Those exist. Ecology and ecosystem manifests remain `placeholder`.
 
 ## In progress
 
@@ -24,7 +24,6 @@ Maturity stays `placeholder`. Scaffold law defines `placeholder` as declared in 
 
 ## Next milestone
 
-Advance from `placeholder` → `scaffolded`:
-1. Add `SCAFFOLD.md` (manifests and the directory structure already exist)
-2. Implement `governance/` wired to HASEOS
-3. Populate `shared_scaffold/` with universe-specific templates
+Advance from `scaffolded` → `in_progress`:
+1. Implement `governance/` wired to HASEOS
+2. Populate `shared_scaffold/` with universe-specific templates
